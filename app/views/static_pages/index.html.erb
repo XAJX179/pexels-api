@@ -1,0 +1,12 @@
+<p>
+  Number of collections:
+  <%= @my_collections.size %>
+</p>
+<%= form_with url: :search do |f| %>
+  <%= f.label :collection_id %>
+  <%= f.select :collection_id, @my_collections %>
+  <%= f.submit "See Collection" %>
+<% end %>
+<% if @search_result %>
+
+<% end %>
