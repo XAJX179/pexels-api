@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  root "static_pages#index"
-  get "home" => "static_pages#index", as: :home
-  post "home" => "static_pages#search", as: :search
+  scope "/pexels-api" do
+    root "static_pages#index"
+    get "home" => "static_pages#index", as: :home
+    post "home" => "static_pages#search", as: :search
+  end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
